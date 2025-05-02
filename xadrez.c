@@ -1,44 +1,60 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck (novato)
+// Desafio de Xadrez - MateCheck (nível Aventureiro)
 // Aluno Washington Melo
 
 int main() {
-    printf("*** Jogo de Xadrez - Novato ***\n\n");
+    printf("*** Jogo de Xadrez - Aventureiro ***\n\n");
 
-    printf("*** Movimentos da Torre ***\n\n");
+    printf("*** Movimentos da Torre - 5 casas para a direita ***\n\n");
 
-    //Torre - Movimentando 5 casas para a direita
+    //Torre - Movimentando
 
     for (int i = 0; i < 5; i++) {
-        printf("Torre - Movimento %d para a direita\n", i + 1);
+        printf("Torre - Direita\n");
     }
     
-    printf("\n*** Movimentos do Bispo ***\n\n");
+    printf("\n*** Movimentos do Bispo  - 5 casas para a diagonal superior direita ***\n\n");
 
-    //Bispo - Movimentando 5 casas para a diagonal superior direita
+    //Bispo - Movimentando 
+
     // Variável para os movimentos do bispo
-
     int i = 0;
     
     while (i < 5) {
-        printf("Bispo - Movimento %d para cima\n", i + 1);
-        printf("Bispo - Movimento %d para a direita\n", i + 1);
+        printf("Bispo - Cima\n");
+        printf("Bispo - Direita\n");
+
         i++;
     }
 
-    printf("\n*** Movimentos da Rainha ***\n\n");
+    printf("\n*** Movimentos da Rainha - 8 casas para a esquerda ***\n\n");
 
-    //Rainha - Movimentando 8 casas para a esquerda
+    //Rainha - Movimentando
     // Variável para os movimentos da rainha
 
     int j = 0;
 
     do {
-        printf("Rainha - Movimento %d para a esquerda\n", j + 1);
+        printf("Rainha - Esquerda\n");
         j++;
     } while (j < 8);
 
-    return 0;
+    printf("\n===========================================================================\n");
 
+    printf("\n*** Movimentos do Cavalo - 2 casas para baixo e 1 casa para a esquerda ***\n\n");
+
+    for (int k = 0; k < 1; k++) //Variável de movimentação do cavalo para a esquerda
+    {
+        int l = 2; //Variável de movimentação do cavalo para baixo
+        while (l > 0) {
+            printf("Cavalo - Baixo\n");
+            l--;
+        }
+        printf("Cavalo - Esquerda\n");
+    
+    }
+    
+
+    return 0;
 }
