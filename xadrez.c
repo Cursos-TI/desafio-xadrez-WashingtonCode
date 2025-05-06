@@ -59,11 +59,16 @@ int main() {
 
     int i;
 
-    for (int i = 0; i < 1; i++) {         // Variável de movimentação do cavalo para a direita (loop externo)
-        for (int j = 0; j < 2; j++) {     // Aninhamento, variável de movimentação do cavalo para cima (loop interno)
-            printf("Cavalo - Cima\n");    // imprime o movimento do cavalo para cima
-        }
-        printf("Cavalo - Direita\n");     // imprime o movimento do cavalo para a direita
+    for (int i = 1; i < 4; i++) {           // Variável de movimentação do cavalo para a direita (loop externo)
+        if (i == 2) break; {                // Sai do loop quando i é 2
+        for (int j = 1; j < 4; j++) {       // Aninhamento, variável de movimentação do cavalo para cima (loop interno)
+            if (j == 1) continue; {         // Pula a iteração quando j é 1            
+                printf("Cavalo - Cima\n");  // imprime o movimento do cavalo para cima
+            }
+        }        
+        printf("Cavalo - Direita\n");       // imprime o movimento do cavalo para a direita                
+        }        
     }
+
     return 0;
 }
